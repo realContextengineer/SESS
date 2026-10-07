@@ -53,3 +53,11 @@ footer{background:radial-gradient(circle at 15% 0,#27485b55,transparent 33%),lin
 dialog{background:linear-gradient(135deg,#f7f6ef,#e0e3dc);box-shadow:0 35px 90px #000a;border:6px double #936431}dialog img{box-shadow:0 18px 42px #0d22343d}
 
 @media(max-width:700px){body:before{display:none}.article{padding:24px}.page-head h1{text-shadow:0 2px 8px #020b1244}.journal-feature:hover,.notice-items>a:hover,.photo:hover,.society-photo-card:hover{transform:none}}
+
+/* Quiet brand arrival and a more intentional masthead */
+header{padding-top:19px;background-image:radial-gradient(ellipse at 50% 25%,#93643114 0,transparent 38%),linear-gradient(115deg,#ffffff70,transparent 40%,#93643109),repeating-linear-gradient(0deg,transparent,transparent 3px,#182d4210 4px,transparent 5px)}
+.brand{position:relative;padding-bottom:16px;animation:mastheadArrival .9s cubic-bezier(.2,.7,.2,1) both}
+.brand:after{content:'';position:absolute;left:17%;right:17%;bottom:5px;height:1px;background:linear-gradient(90deg,transparent,#936431 22%,#936431 78%,transparent);transform:scaleX(0);transform-origin:center;animation:mastheadRule 1s .35s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes mastheadArrival{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes mastheadRule{to{transform:scaleX(1)}}
+@media(max-width:700px){header{padding-top:13px}.brand{padding-bottom:0}.brand:after{display:none}}
